@@ -1,11 +1,12 @@
 ﻿namespace DependencyInjectionPractice.Services {
     public class MessageService {
-
-        public MessageService() {
+        private readonly DateService dateService;
+        public MessageService(DateService dateService) {
             Console.WriteLine("MessageService Created");
+            this.dateService = dateService;
         }
         public string GetMessage() {
-            return "Hello DI";
+            return $"Today is {dateService.GetDate()}";
         }
     }
 }

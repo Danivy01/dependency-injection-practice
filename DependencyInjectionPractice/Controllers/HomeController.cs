@@ -22,7 +22,7 @@ namespace DependencyInjectionPractice.Controllers
 
         public IActionResult Index()
         {
-            var result = $"Message: {_messageService.GetMessage()}\n" + $"Date: {dateService.GetDate()}\n" + $"User: {userService.GetUsername()}";
+            var result = $"Message: {_messageService.GetMessage()}\n" + $"User: {userService.GetUsername()}";
             return Content(result);
         }
 
